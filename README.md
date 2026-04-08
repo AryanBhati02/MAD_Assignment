@@ -1,4 +1,4 @@
-#MAD Assignment (Mobile Application Development)
+## MAD Assignment (Mobile Application Development)
 
 This repository contains 4 Android applications developed as part of the **Mobile Application Development (CSE3709)** assignment.
 
