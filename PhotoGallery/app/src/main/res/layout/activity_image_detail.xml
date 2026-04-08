@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_image_detail.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDetail"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#0A0A0F"
+        app:title="Photo Details"
+        app:titleTextColor="#FFFFFF" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Full-width image preview - adjusted to show complete image -->
+            <ImageView
+                android:id="@+id/ivDetailPreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxHeight="450dp"
+                android:scaleType="fitCenter"
+                android:background="#111118"
+                android:contentDescription="Image preview"/>
+
+            <!-- Details section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IMAGE DETAILS"
+                    android:textSize="10sp"
+                    android:textColor="#6366F1"
+                    android:letterSpacing="0.12"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Name row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_bg"
+                    android:padding="16dp"
+                    android:layout_marginBottom="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FILE NAME"
+                        android:textSize="9sp"
+                        android:textColor="#6B7280"
+                        android:letterSpacing="0.1"
+                        android:layout_marginBottom="5dp"/>
+                    <TextView
+                        android:id="@+id/tvDetailName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="#F9FAFB"/>
+                </LinearLayout>
+
+                <!-- Path row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_bg"
+                    android:padding="16dp"
+                    android:layout_marginBottom="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FILE PATH"
+                        android:textSize="9sp"
+                        android:textColor="#6B7280"
+                        android:letterSpacing="0.1"
+                        android:layout_marginBottom="5dp"/>
+                    <TextView
+                        android:id="@+id/tvDetailPath"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="#9CA3AF"/>
+                </LinearLayout>
+
+                <!-- Size + Date row side by side -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="28dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/card_bg"
+                        android:padding="16dp"
+                        android:layout_marginEnd="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SIZE"
+                            android:textSize="9sp"
+                            android:textColor="#6B7280"
+                            android:letterSpacing="0.1"
+                            android:layout_marginBottom="5dp"/>
+                        <TextView
+                            android:id="@+id/tvDetailSize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="#F9FAFB"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/card_bg"
+                        android:padding="16dp"
+                        android:layout_marginStart="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DATE"
+                            android:textSize="9sp"
+                            android:textColor="#6B7280"
+                            android:letterSpacing="0.1"
+                            android:layout_marginBottom="5dp"/>
+                        <TextView
+                            android:id="@+id/tvDetailDateTaken"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="#F9FAFB"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Delete button -->
+                <Button
+                    android:id="@+id/btnDeleteImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Delete Photo"
+                    android:textSize="15sp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/btn_danger"
+                    android:stateListAnimator="@null"
+                    android:layout_marginBottom="24dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

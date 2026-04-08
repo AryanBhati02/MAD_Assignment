@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_main.xml — Modern dark UI -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="40dp">
+
+            <!-- Camera icon circle -->
+            <FrameLayout
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginBottom="16dp">
+                <View
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/circle_accent"/>
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:tint="#FFFFFF"
+                    android:contentDescription="Camera"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PhotoGallery"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:letterSpacing="-0.02"
+                android:layout_marginBottom="6dp"/>
+
+
+        </LinearLayout>
+
+        <!-- Save folder card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp"
+            android:layout_marginBottom="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SAVE LOCATION"
+                android:textSize="10sp"
+                android:textColor="#6366F1"
+                android:letterSpacing="0.12"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tvSelectedFolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detecting folder..."
+                android:textSize="12sp"
+                android:textColor="#9CA3AF"
+                android:ellipsize="middle"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <!-- Buttons -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACTIONS"
+            android:textSize="10sp"
+            android:textColor="#6B7280"
+            android:letterSpacing="0.12"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnRequestPermissions"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Grant Permissions"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_primary"
+            android:layout_marginBottom="12dp"
+            android:stateListAnimator="@null"/>
+
+        <Button
+            android:id="@+id/btnChooseFolder"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Folder auto-configured"
+            android:textSize="15sp"
+            android:textColor="#4B5563"
+            android:background="@drawable/btn_disabled"
+            android:layout_marginBottom="12dp"
+            android:enabled="false"
+            android:stateListAnimator="@null"/>
+
+        <Button
+            android:id="@+id/btnTakePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Take Photo"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_primary"
+            android:layout_marginBottom="12dp"
+            android:stateListAnimator="@null"/>
+
+        <Button
+            android:id="@+id/btnOpenGallery"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Open Gallery"
+            android:textSize="15sp"
+            android:textColor="#6366F1"
+            android:background="@drawable/btn_outline"
+            android:stateListAnimator="@null"/>
+
+    </LinearLayout>
+</ScrollView>
